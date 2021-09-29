@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Page Title</title>
+</head>
+
+<body>
+    <!-- <div class="container"> -->
+    <h1>"Hidden things by" Chaitanya Swaroop Udata</h1>
+
+    <form>
+        <label for="Secret_word">Enter the secret word</label>
+        <input type="password" id="Secret_word" name="Secret_word" min=10 max=50 step=2 value=Secret> <br>
+        <br>
+        <label for="guess">Enter a guess</label>
+        <input type="text" id="guess" name="guess" autofocus> <br>
+        <br>
+        <input type="button" onclick="resolveForm()" value="Check the guess">
+    </form>
+
+    <p id="result">This text will be replaced </p>
+
+    <script>
+
+        function resolveForm() {
+            console.log("Getting form values")
+            secretword = document.getElementById("secret_word").value
+            guess = document.getElementById("text").value
+            confirmed = confirm("Are these the values? " + secretword + " and " + guess)
+
+            out = document.getElementById("result")
+            if (confirmed) {
+                out.innerHTML = "Values were confirmed"
+            } else {
+                out.innerHTML = "Values were not confirmed"
+            }
+        }
+    </script>
+
+    <!-- </div> -->
+</body>
+
+</html>
