@@ -12,8 +12,8 @@
         crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
         integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
-        crossorigin="anonymous"></script> -->
-    <title>Personal Details</title>
+        crossorigin="anonymous"></script>
+    <title>Personal Details</title> -->
 
     <!-- <style>
         .buttonSubmit {
@@ -60,57 +60,53 @@
                     </div>
                     <br>
                     <div class="form-group">
-        
                         <label for="phrase">Enter a phrase: </label>
                         <input type="text" class="form-control form-check-label" id="phrase" autofocus />
                     </div>
                     <br>    
                     <div class="buttonSubmit">
-        
                         <button class="btn btn-primary " type="button" onclick="processPhrase()" style="background-color: aqua;">Check the
                             phrase</button>
                     </div>
                 </form>
+                <br>
                 <div id="result" class="form-group"></div>
-            </div>
+
+        <!-- <div class="container">
+            <img src="alligator.jpeg" alt="Alligator" width="200" height="200">
+            <img src="cat.jpeg" alt="Cat" width="200" height="200">
+            <img src="tiger.jpg" alt="tiger" width="200" height="200">
+        </div>
+         -->
         
+        <br>
 
-                <!-- ------------------------------------------------------------------------------------------------------------------ -->
-                <!-- <br>
-                <div class="container">
-                    <img src="tiger.jpg" alt="Tiger" class="img-thumbnail" width="200" height="200">
-                    <img src="cat.jpeg" alt="Cat" class="img-thumbnail" width="200" height="200">
-                    <img src="alligator.jpeg" alt="Alligator" class="img-thumbnail" width="200" height="200">
-                </div> -->
+        <img src="urial.png" id="image" height="200" width="200" onclick="newImage()">
+        <script>
+            let usingImage = 1;
+            function newImage(){
+                
+                switch(usingImage){
+                    case 1:
+                        document.getElementById("image").src= "urial.png"
+                        usingImage=2;
+                        break;
+                    case 2:
+                    document.getElementById("image").src= "dog.png"
+                        usingImage=3;
+                        break;
+                    case 3:
+                    document.getElementById("image").src= "alligator.png"
+                        usingImage=1;
+                        break;
+                }
 
-                <!-- ------------------------------------------------------------------------------------------------------------------ -->
+            }
+        </script>
+               
 
-                <!-- <div>
-                    <h2>Change image onClick event here...</h2>
-                    <img src="tiger.jpg" id="getImage" width="200" height="200">
-
-                </div>
-                <div>
-                    <input type="button" onclick="imagefun()" value="Change Image">
-                </div>
-                <script>
-                    function imagefun() {
-                        var Image_Id = document.getElementById('getImage');
-                        if (Image_Id.src.match("tiger.jpg")) {
-                            Image_Id.src = "cat.jpeg";
-                        }
-                        else if (Image_Id.src.match("cat.jpeg")) {
-                            Image_Id.src = "tiger.jpg";
-                        }
-                        else if (Image_Id.src.match("alligator.jpeg")) {
-                            Image_Id.src = "tiger.jpeg";
-                        }
-                        else {
-                            Image_Id.src = "alligator.jpeg"
-                        }
-                    }
-                </script> -->
-
+    </div>
+        
     </body>
 
 </html>
