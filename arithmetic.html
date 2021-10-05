@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>
+        Arithematic page
+    </title>
+    <script>
+        function powers() {
+            let baseval = document.getElementById("base").value;
+            let expval = document.getElementById("exponent").value;
+            let result = "";
+            for (let i = 1; i <= expval; i++) {
+                result += Math.pow(baseval, i);
+                for (let j = i; j <= i; j++) {
+                    if (j != expval) {
+                        result += ", ";
+                    }
+                }
+            }
+            document.getElementById("presult").innerHTML = result;
+            document.getElementById("baseval").innerHTML = baseval;
+            document.getElementById("expval").innerHTML = expval;
+        }
+    </script>
+</head>
+
+<body>
+        <h1>"Chaitanya Swaroop Udata" Computes</h1>
+    <div class="container">
+        <form>
+            <label for="base" style="color: brown;">Enter a base: </label>
+            <input type="number" id="base" name="base" min=0 max=50 value=10> <br>
+            <br>
+            <label for="exponent" style="color: brown;">Enter an Exponent: </label>
+            <input type="number" id="exponent" name="exponent" min=0 max=50 value="2"> <br>
+            <br>
+            <input type="button" class="btn btn-primary" onclick="powers()" value="Compute" style="background-color: blue; color: aliceblue;">
+        </form>
+        <br>
+
+        <div class="fw-bold">Powers of <span id="bv" style="color:blue;"></span> are: <span id="presult"
+            style="color:red;"></span>
+        (exponent was <span id="expval" style="color:green"></span><span>)</span>
+    </div>
+
+        <script>
+
+            function resolveForm() {
+                console.log("Getting form values")
+                age = document.getElementById("form1_age").value
+                nick = document.getElementById("form1_nick").value
+                confirmed = confirm("Are these the values? " + age + " and " + nick)
+
+                out = document.getElementById("result")
+                if (confirmed) {
+                    out.innerHTML = "Values were confirmed"
+                } else {
+                    out.innerHTML = "Values were not confirmed"
+                }
+            }
+        </script>
+    </div>
+</body>
+
+</html>
